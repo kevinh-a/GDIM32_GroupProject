@@ -8,6 +8,4 @@ public class Characters : MonoBehaviour
     // For now, damage will be instant and collideable
     protected int damage;
 
-    abstract public void Move{
-    }
 }
