@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LightSaber : CharacterInstance
 {
+    public int unitHp;
+    public float unitSpeed;
+    public int unitDmg;
+    public int unitCost;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Initialize("Lightsaber", unitCost, unitSpeed, unitDmg, unitHp);
     }
 
-    // Update is called once per frame
+    public override void DealDmg(BoxCollider2D collider)
+    {
+        Destroy(gameObject);
+        
+
+    }
+    // Currently this unit moves to the left.
     void Update()
     {
-        
+        transform.position = new Vector3(transform.position.x + unitSpeed, transform.position.y);
     }
 }
