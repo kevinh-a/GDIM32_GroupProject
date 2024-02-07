@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af06d930cc0bc4fbe98d045ffabf26e4, type: 3}
-  m_Name: New SO Skill Cards
+  m_Name: SkillStun
   m_EditorClassIdentifier: 
-  displayName: HEAL
-  displayIcon: {fileID: 21300000, guid: b712c28086f57470288e0dd36b5cf9f1, type: 3}
-  cost: 3
+  displayName: STUN
+  displayIcon: {fileID: 0}
+  cost: 2
+  damage: 5

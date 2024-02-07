@@ -22,6 +22,8 @@ public class SOSkillCards : ScriptableObject
     private int cost;
     // [SerializeField]
     //private CreateInstance prefab;
+    [SerializeField]
+    private int damage; 
 
 
     public string GetName()
