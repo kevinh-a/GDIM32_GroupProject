@@ -20,8 +20,8 @@ public class SOSkillCards : ScriptableObject
     private Sprite displayIcon;
     [SerializeField]
     private int cost;
-    [SerializeField]
-    private SkillInstance prefab;
+    // [SerializeField]
+    //private CreateInstance prefab;
 
 
     public string GetName()
