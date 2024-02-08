@@ -15,5 +15,5 @@ MonoBehaviour:
   UnitInCard: []
   CardName: LIGHTSABERSUPREME
   ManaCost: 6
-  CardIcon: {fileID: 0}
+  CardIcon: {fileID: 21300000, guid: b0752a2f6081541d58ab2c8a4aaf62c6, type: 3}
   amountSpawned: 1
