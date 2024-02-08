@@ -8,21 +8,21 @@ public class Boss : MonoBehaviour
 {
     [SerializeField] public float maxHealth;
     [SerializeField] public float setDamage;
-    protected float health;
+    [SerializeField] protected float Currenthealth;
     protected float dmg;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        Currenthealth = maxHealth;
         dmg = setDamage;
     }
 
     // Update is called once per frame
     void Update()
     {
-         if (health <= 0)
+         if (Currenthealth <= 0)
         {   
             die();
         }
@@ -31,14 +31,14 @@ public class Boss : MonoBehaviour
     public bool DamageEnemy(float dmg)
     {
        
-        if (health < dmg)
+        if (Currenthealth < dmg)
         {
-            health = 0;
+            Currenthealth = 0;
             return true;
         }
         else
         {
-            health -= dmg;
+            Currenthealth -= dmg;
             return false;
         }
     }
