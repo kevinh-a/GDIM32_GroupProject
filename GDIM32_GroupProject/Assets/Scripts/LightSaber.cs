@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSaber : CharacterInstance
+public class LightSaber : CharacterBase
 {
     public int unitHp;
     public float unitSpeed;
@@ -12,15 +12,9 @@ public class LightSaber : CharacterInstance
     // Start is called before the first frame update
     void Start()
     {
-        Initialize("Lightsaber", unitCost, unitSpeed, unitDmg, unitHp);
+        //Initialize("Lightsaber", unitCost, unitSpeed, unitDmg, unitHp);
     }
 
-    public override void DealDmg(BoxCollider2D collider)
-    {
-        Destroy(gameObject);
-        
-
-    }
     // Currently this unit moves to the left.
     void Update()
     {
