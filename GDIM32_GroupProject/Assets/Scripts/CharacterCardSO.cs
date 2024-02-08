@@ -10,9 +10,9 @@ public class CharacterCardSO : ScriptableObject
     {
         LIGHTSABER,
         LASERGUNNER,
+        LIGHTSABERSUPREME,
         ELEMCASTER,
         GOONS,
-        LIGHTSABERSUPREME,
         TURRET
     }
 

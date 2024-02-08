@@ -45,12 +45,12 @@ public abstract class CharacterBase : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.TryGetComponent<EnemyBase>(out EnemyBase enemyProperties))
+        if(collision.gameObject.TryGetComponent<Boss>(out Boss enemyProperties))
         {
-            enemyProperties.TakeDmg(DealDmg());
-            TakeDmg(enemyProperties.DealDmg());
+            enemyProperties.DamageEnemy(DealDmg());
+            TakeDmg((int)enemyProperties.setDamage);
         }
     }
 
-    //public abstract void Movenent()
+    //public abstract void Movement()
 }
