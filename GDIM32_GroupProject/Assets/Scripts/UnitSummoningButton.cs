@@ -8,20 +8,34 @@ public class UnitSummoningButton : MonoBehaviour
     private GameObject[] Units;
     [SerializeField]
     private GameObject[] SpawnPoints;
+    [SerializeField]
+    private ManaSystem Mana;
 
     public void LightSaber()
     {
-        //Refer to the ENUMS in CharacterCardSO
-        Instantiate(Units[0]);
+        if (Mana.CurrentMana >= 3)
+        {
+            //Refer to the ENUMS in CharacterCardSO
+            Instantiate(Units[0]);
+            Mana.CurrentMana -= 3f;
+        }
     }
     public void LaserGunner()
     {
-        //Refer to the ENUMS in CharacterCardSO
-        Instantiate(Units[1]);
+        if (Mana.CurrentMana >= 4)
+        {
+            //Refer to the ENUMS in CharacterCardSO
+            Instantiate(Units[1]);
+            Mana.CurrentMana -= 4f;
+        }
     }
     public void LightsaberSupreme()
     {
-        //Refer to the ENUMS in CharacterCardSO
-        Instantiate(Units[2]);
+        if (Mana.CurrentMana >= 6)
+        {
+            //Refer to the ENUMS in CharacterCardSO
+            Instantiate(Units[2]);
+            Mana.CurrentMana -= 6f;
+        }
     }
 }

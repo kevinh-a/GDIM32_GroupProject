@@ -8,7 +8,8 @@ public class ManaSystem : MonoBehaviour
 {
     private int MaxManaCount;
     private int MinManaCount;
-
+    [SerializeField]
+    public float CurrentMana;
 
 
     // Start is called before the first frame update
@@ -16,15 +17,14 @@ public class ManaSystem : MonoBehaviour
     {
         MaxManaCount = 10;
         MinManaCount = 0;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (MaxManaCount <=10)
+        while (CurrentMana <= MaxManaCount)
         {
-            MaxManaCount += 1;
+            CurrentMana += .1f;
         }
     }
 }
