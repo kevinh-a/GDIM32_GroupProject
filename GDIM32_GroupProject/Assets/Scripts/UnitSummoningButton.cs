@@ -17,7 +17,7 @@ public class UnitSummoningButton : MonoBehaviour
         {
             //Refer to the ENUMS in CharacterCardSO
             Instantiate(Units[0]);
-            Mana.CurrentMana -= 3f;
+            Mana.CurrentMana -= 3;
         }
     }
     public void LaserGunner()
@@ -26,7 +26,7 @@ public class UnitSummoningButton : MonoBehaviour
         {
             //Refer to the ENUMS in CharacterCardSO
             Instantiate(Units[1]);
-            Mana.CurrentMana -= 4f;
+            Mana.CurrentMana -= 4;
         }
     }
     public void LightsaberSupreme()
@@ -35,7 +35,7 @@ public class UnitSummoningButton : MonoBehaviour
         {
             //Refer to the ENUMS in CharacterCardSO
             Instantiate(Units[2]);
-            Mana.CurrentMana -= 6f;
+            Mana.CurrentMana -= 6;
         }
     }
 }
