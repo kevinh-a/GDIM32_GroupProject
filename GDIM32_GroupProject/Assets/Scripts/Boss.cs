@@ -7,13 +7,16 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [SerializeField] public float maxHealth;
+    [SerializeField] public float setDamage;
     protected float health;
+    protected float dmg;
 
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        dmg = setDamage;
     }
 
     // Update is called once per frame
