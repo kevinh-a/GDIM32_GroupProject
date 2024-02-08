@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1477720004}
   - component: {fileID: 1477720008}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: LightsaberUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  BaseHp: 0
-  dmg: 0
+  BaseHp: 30
+  dmg: 15
   CharacterDetails: {fileID: 11400000, guid: 6f46e7f4f01154dce93179efbc20349d, type: 2}
   rb: {fileID: 1477720008}
 --- !u!61 &1477720005
@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7fcfbd57bc541e8afe0ce144d26cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectHp: 15
 --- !u!50 &1549529070
 Rigidbody2D:
   serializedVersion: 4
@@ -556,7 +557,7 @@ Transform:
   m_GameObject: {fileID: 1549529068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9, y: -3.87, z: 0}
+  m_LocalPosition: {x: 4.08, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
