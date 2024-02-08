@@ -7,6 +7,8 @@ public abstract class CharacterBase : MonoBehaviour
     [SerializeField]
     protected float Speed;
     [SerializeField]
+    protected int MaxHp;
+    [SerializeField]
     protected int BaseHp;
     [SerializeField]
     protected int dmg;
@@ -14,7 +16,11 @@ public abstract class CharacterBase : MonoBehaviour
     protected CharacterCardSO CharacterDetails;
     [SerializeField]
     protected Rigidbody2D rb;
-    //private EnemyBase collidedObject;
+
+    void Start()
+    {
+        BaseHp = MaxHp;
+    }
 
     //This will be in the base class until there is a more advanced AI on every unit (second playtest material)
     void Update()
@@ -31,7 +37,7 @@ public abstract class CharacterBase : MonoBehaviour
 
     private void TakeDmg(int dmg)
     {
-        BaseHp = dmg;
+        BaseHp -= dmg;
         if(BaseHp <= 0)
         {
             Destroy(gameObject);
@@ -39,14 +45,11 @@ public abstract class CharacterBase : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "EnemyBase")
+        if(collision.gameObject.TryGetComponent<EnemyBase>(out EnemyBase enemyProperties))
         {
-            //collidedObject = collision.gameObject.EnemyBase;
-            Destroy(gameObject);
-            TakeDmg(dmg);
-            //collidedObject.TakeDmg(BaseHp);
+            enemyProperties.TakeDmg(DealDmg());
+            TakeDmg(enemyProperties.DealDmg());
         }
-
     }
 
     //public abstract void Movenent()
