@@ -16,7 +16,7 @@ public class UnitSummoningButton : MonoBehaviour
         if (Mana.CurrentMana >= 3)
         {
             //Refer to the ENUMS in CharacterCardSO
-            Instantiate(Units[0]);
+            Instantiate(Units[0], SpawnPoints[0].transform);
             Mana.CurrentMana -= 3;
         }
     }
