@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterBase : MonoBehaviour
+public abstract class CharacterBase : MonoBehaviour
 {
     [SerializeField]
     protected float Speed;
@@ -11,9 +11,9 @@ public class CharacterBase : MonoBehaviour
     [SerializeField]
     protected int dmg;
     [SerializeField]
-    private CharacterCardSO CharacterDetails;
+    protected CharacterCardSO CharacterDetails;
     [SerializeField]
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     //private EnemyBase collidedObject;
 
     //This will be in the base class until there is a more advanced AI on every unit (second playtest material)
@@ -49,4 +49,5 @@ public class CharacterBase : MonoBehaviour
 
     }
 
+    //public abstract void Movenent()
 }

@@ -6,6 +6,8 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField]
     public static int health;
+    [SerializeField]
+    private int objectHp;
     /* For future tower damage reference (think of the boss/towers as an AI)
     [SerializeField]
     public int dmg;
@@ -16,6 +18,10 @@ public class EnemyBase : MonoBehaviour
         return (dmg);
     }
     */
+    void Start()
+    {
+        health = objectHp;
+    }
     public static void TakeDmg(int dmg)
     {
         Debug.Log(health);
