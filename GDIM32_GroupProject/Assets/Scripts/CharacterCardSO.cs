@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Unit", menuName = "CardGame/UnitCards")]
 public class CharacterCardSO : ScriptableObject
 {
+    //Will be used to hold card data for each unit available as a card
     public enum unitType
     {
         LIGHTSABER,
@@ -20,15 +21,9 @@ public class CharacterCardSO : ScriptableObject
     [SerializeField]
     private string CardName;
     [SerializeField]
-    public int BaseHp { get; private set; }
-    [SerializeField]
     private int ManaCost;
     [SerializeField]
     private Sprite CardIcon;
-    [SerializeField]
-    private float Speed;
-    [SerializeField]
-    private int Dmg;
     //For units that spawn more than one instance of itself
     [SerializeField]
     private int amountSpawned;

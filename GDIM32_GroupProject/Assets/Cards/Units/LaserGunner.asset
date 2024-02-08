@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: LaserGunner
   m_EditorClassIdentifier: 
   UnitInCard: []
-  CardName: 
-  BaseHp: 0
-  ManaCost: 0
+  CardName: LASERGUNNER
+  ManaCost: 3
   CardIcon: {fileID: 0}
-  Speed: 0
-  Dmg: 0
-  amountSpawned: 0
+  amountSpawned: 1

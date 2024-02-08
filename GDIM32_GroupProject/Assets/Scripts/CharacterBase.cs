@@ -4,32 +4,47 @@ using UnityEngine;
 
 public class CharacterBase : MonoBehaviour
 {
-    //public float Speed { get; private set; }
-    //public int BaseHp { get; private set; }
-
+    [SerializeField]
+    protected float Speed;
+    [SerializeField]
+    protected int BaseHp;
+    [SerializeField]
+    protected int dmg;
     [SerializeField]
     private CharacterCardSO CharacterDetails;
+    [SerializeField]
+    private Rigidbody2D rb;
+    //private EnemyBase collidedObject;
 
+    //This will be in the base class until there is a more advanced AI on every unit (second playtest material)
     void Update()
     {
-        
+        //First one is way too fast
+        //transform.position = new Vector3(transform.position.x + Speed, transform.position.y);
+        rb.velocity = new Vector2(Speed, 0f);
     }
 
-    private void DealDmg()
+    private int DealDmg()
     {
-        //CharacterDetails.BaseHp = 0;
+        return dmg;
     }
 
-    private void TakeDmg()
+    private void TakeDmg(int dmg)
     {
-        //BaseHp == 0;
+        BaseHp = dmg;
+        if(BaseHp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "damageable")
+        if(collision.gameObject.tag == "EnemyBase")
         {
-            DealDmg();
-            TakeDmg();
+            //collidedObject = collision.gameObject.EnemyBase;
+            Destroy(gameObject);
+            TakeDmg(dmg);
+            //collidedObject.TakeDmg(BaseHp);
         }
 
     }

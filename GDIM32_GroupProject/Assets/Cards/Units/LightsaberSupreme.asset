@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: LightsaberSupreme
   m_EditorClassIdentifier: 
   UnitInCard: []
-  CardName: 
-  BaseHp: 0
+  CardName: LIGHTSABERSUPREME
   ManaCost: 0
   CardIcon: {fileID: 0}
-  Speed: 0
-  Dmg: 0
   amountSpawned: 0

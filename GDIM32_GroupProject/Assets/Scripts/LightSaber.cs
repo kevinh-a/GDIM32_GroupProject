@@ -4,20 +4,11 @@ using UnityEngine;
 
 public class LightSaber : CharacterBase
 {
-    public int unitHp;
-    public float unitSpeed;
-    public int unitDmg;
-    public int unitCost;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Initialize("Lightsaber", unitCost, unitSpeed, unitDmg, unitHp);
-    }
-
-    // Currently this unit moves to the left.
+    /* WILL BE MODIFIED SECOND PLAYTEST ALONG WITH OTHER UNIT TYPES
+    // Currently this unit moves to the left. 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + unitSpeed, transform.position.y);
+        //transform.position = new Vector3(transform.position.x + Speed, transform.position.y);
     }
+    */
 }
