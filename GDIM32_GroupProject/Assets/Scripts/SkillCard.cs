@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Jasmine Chen
+
 public class SkillCard : MonoBehaviour
 {
 
