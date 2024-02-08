@@ -379,8 +379,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: setDamage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
+      propertyPath: Currenthealth
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3085070351925442630, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: m_Name
