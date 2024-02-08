@@ -6,7 +6,8 @@ public class UnitSummoningButton : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] Units;
-
+    [SerializeField]
+    private GameObject[] SpawnPoints;
     public void LightSaber()
     {
         //Refer to the ENUMS in CharacterCardSO
