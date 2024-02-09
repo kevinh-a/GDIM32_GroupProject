@@ -11,12 +11,17 @@ public class UnitSummoningButton : MonoBehaviour
     [SerializeField]
     private ManaSystem Mana;
 
+    private int randomIndex()
+    {
+        return Random.Range(0, SpawnPoints.Length);
+    }
+
     public void LightSaber()
     {
         if (Mana.CurrentMana >= 3)
         {
             //Refer to the ENUMS in CharacterCardSO
-            Instantiate(Units[0], SpawnPoints[0].transform);
+            Instantiate(Units[0], SpawnPoints[randomIndex()].transform);
             Mana.CurrentMana -= 3;
         }
     }
@@ -25,7 +30,7 @@ public class UnitSummoningButton : MonoBehaviour
         if (Mana.CurrentMana >= 4)
         {
             //Refer to the ENUMS in CharacterCardSO
-            Instantiate(Units[1]);
+            Instantiate(Units[1], SpawnPoints[randomIndex()].transform);
             Mana.CurrentMana -= 4;
         }
     }
@@ -34,7 +39,7 @@ public class UnitSummoningButton : MonoBehaviour
         if (Mana.CurrentMana >= 6)
         {
             //Refer to the ENUMS in CharacterCardSO
-            Instantiate(Units[2]);
+            Instantiate(Units[2], SpawnPoints[randomIndex()].transform);
             Mana.CurrentMana -= 6;
         }
     }
