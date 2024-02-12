@@ -1,26 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Jasmine Chen
 
 public class ManaSystem : MonoBehaviour
 {
-    private int MaxManaCount;
-    private int MinManaCount;
+
+    private float MaxManaCount;
+    private float MinManaCount;
     [SerializeField]
     public float CurrentMana;
+    public Slider slider;
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetMana(float CurrentMana)
     {
-        MaxManaCount = 10;
-        MinManaCount = 0;
+        slider.maxValue = CurrentMana;
+        slider.value = CurrentMana;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void ManaRegen()
     {
         while (CurrentMana <= MaxManaCount)
         {
