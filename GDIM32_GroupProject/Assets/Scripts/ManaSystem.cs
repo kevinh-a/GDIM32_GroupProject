@@ -17,14 +17,16 @@ public class ManaSystem : MonoBehaviour
     {
         MaxManaCount = 10;
         MinManaCount = 0;
+        StartCoroutine(RegenMana());
     }
 
     // Update is called once per frame
-    void Update()
+    private IEnumerator RegenMana()
     {
         while (CurrentMana <= MaxManaCount)
         {
-            CurrentMana += .1f;
+            CurrentMana += .2f;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
