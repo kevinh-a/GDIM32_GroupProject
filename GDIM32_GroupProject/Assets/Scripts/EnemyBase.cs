@@ -28,7 +28,7 @@ public class EnemyBase : MonoBehaviour
         if(health <= 0)
         {
             Debug.Log("Destroyed");
-            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2);
         }
     }
 }
