@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Jasmine Chen
+
 public class Manacount : MonoBehaviour
 {
 
