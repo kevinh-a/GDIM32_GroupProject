@@ -23,7 +23,7 @@ public class UnitSummoningButton : MonoBehaviour
         {
             //Refer to the ENUMS in CharacterCardSO
 
-            Instantiate(Units[0], SpawnPoints[0].transform);
+            Instantiate(Units[0], SpawnPoints[randomIndex()].transform);
             Mana.DepleteMana(3);
 
         }
@@ -34,7 +34,7 @@ public class UnitSummoningButton : MonoBehaviour
         {
             //Refer to the ENUMS in CharacterCardSO
 
-            Instantiate(Units[1]);
+            Instantiate(Units[1], SpawnPoints[randomIndex()].transform);
             Mana.DepleteMana(4);
 
         }
@@ -44,7 +44,7 @@ public class UnitSummoningButton : MonoBehaviour
         if (Mana.GetMana() >= 6)
         {
             //Refer to the ENUMS in CharacterCardSO
-            Instantiate(Units[2]);
+            Instantiate(Units[2], SpawnPoints[randomIndex()].transform);
             Mana.DepleteMana(6);
         }
     }
