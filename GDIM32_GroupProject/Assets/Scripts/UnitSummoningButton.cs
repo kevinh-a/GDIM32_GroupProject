@@ -9,7 +9,8 @@ public class UnitSummoningButton : MonoBehaviour
     [SerializeField]
     private GameObject[] SpawnPoints;
     [SerializeField]
-    private ManaSystem Mana;
+    public ManaSystem Mana;
+
 
     private int randomIndex()
     {
@@ -18,29 +19,34 @@ public class UnitSummoningButton : MonoBehaviour
 
     public void LightSaber()
     {
-        if (Mana.CurrentMana >= 3)
+        if (Mana.GetMana() >= 3)
         {
             //Refer to the ENUMS in CharacterCardSO
+
             Instantiate(Units[0], SpawnPoints[randomIndex()].transform);
-            Mana.CurrentMana -= 3;
+            Mana.DepleteMana(3);
+
         }
     }
     public void LaserGunner()
     {
-        if (Mana.CurrentMana >= 4)
+        if (Mana.GetMana() >= 4)
         {
             //Refer to the ENUMS in CharacterCardSO
+
             Instantiate(Units[1], SpawnPoints[randomIndex()].transform);
-            Mana.CurrentMana -= 4;
+            Mana.DepleteMana(4);
+
         }
     }
     public void LightsaberSupreme()
     {
-        if (Mana.CurrentMana >= 6)
+        if (Mana.GetMana() >= 6)
         {
             //Refer to the ENUMS in CharacterCardSO
             Instantiate(Units[2], SpawnPoints[randomIndex()].transform);
-            Mana.CurrentMana -= 6;
+            Mana.DepleteMana(6);
         }
     }
+
 }

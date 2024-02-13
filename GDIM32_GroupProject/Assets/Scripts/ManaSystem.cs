@@ -1,32 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Jasmine Chen
 
 public class ManaSystem : MonoBehaviour
 {
-    private int MaxManaCount;
-    private int MinManaCount;
+
     [SerializeField]
-    public float CurrentMana;
+    private float MaxManaCount;
+    [SerializeField]
+    private float CurrentMana;
+    public Slider slider;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public float GetMana()
     {
-        MaxManaCount = 10;
-        MinManaCount = 0;
+        return CurrentMana;
     }
 
-    // Update is called once per frame
+    public void SetMana(float CurrentMana)
+    {
+        slider.maxValue = MaxManaCount;
+        slider.value = CurrentMana;
+    }
+
+    public void DepleteMana(float CardCost)
+    {
+        CurrentMana -= CardCost;
+        slider.value = CurrentMana;
+    }
+
+
+
     void Update()
     {
-        while (CurrentMana <= MaxManaCount)
+        //Debug.Log(CurrentMana);
+       // Debug.Log(MaxManaCount);
+        if (CurrentMana <= MaxManaCount)
         {
-            CurrentMana += .1f;
+            //Debug.Log("Inside if loop");
+            CurrentMana += Time.deltaTime;
+            slider.value = CurrentMana;
         }
     }
 }
-
-
