@@ -7,27 +7,41 @@ using UnityEngine.UI;
 
 public class ManaSystem : MonoBehaviour
 {
-
-    private float MaxManaCount;
-    private float MinManaCount;
+    
     [SerializeField]
-    public float CurrentMana;
+    private float MaxManaCount;
+    [SerializeField]
+    private float CurrentMana;
     public Slider slider;
 
+    public float GetMana()
+    {
+        return CurrentMana;
+    }
 
     public void SetMana(float CurrentMana)
     {
-        slider.maxValue = CurrentMana;
+        slider.maxValue = MaxManaCount;
+        slider.value = CurrentMana;
+    }
+
+    public void DepleteMana(float CardCost)
+    {
+        CurrentMana -= CardCost;
         slider.value = CurrentMana;
     }
 
 
-    public void ManaRegen()
+
+    void Update()
     {
-        while (CurrentMana <= MaxManaCount)
+        Debug.Log(CurrentMana);
+        Debug.Log(MaxManaCount);
+        if (CurrentMana <= MaxManaCount)
         {
-            CurrentMana += .1f;
+            Debug.Log("Inside if loop");
+            CurrentMana += Time.deltaTime;
+            slider.value = CurrentMana;
         }
     }
 }
-
