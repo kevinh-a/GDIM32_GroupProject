@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Jasmine Chen
 
@@ -46,5 +47,6 @@ public class Boss : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene(2);
     }
 }
