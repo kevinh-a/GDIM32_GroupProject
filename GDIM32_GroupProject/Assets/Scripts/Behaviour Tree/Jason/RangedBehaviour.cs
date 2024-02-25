@@ -18,6 +18,8 @@ public class NewBehaviourScript : MonoBehaviour
         walk.AddChild(target);
         walk.AddChild(attack);
         tree.AddChild(walk);
+
+        tree.PrintTree();
     }
 
     // Update is called once per frame
