@@ -40,7 +40,7 @@ public class ManaSystem : MonoBehaviour
         if (CurrentMana <= MaxManaCount)
         {
             //Debug.Log("Inside if loop");
-            CurrentMana += Time.deltaTime;
+            CurrentMana += Time.deltaTime * 2;
             slider.value = CurrentMana;
         }
     }
