@@ -21,7 +21,7 @@ public class SOSkillCards : ScriptableObject
     [SerializeField]
     private Sprite displayIcon;
     [SerializeField]
-    private int cost;
+    private int ManaCost;
     // [SerializeField]
     //private CreateInstance prefab;
     [SerializeField]
@@ -35,11 +35,17 @@ public class SOSkillCards : ScriptableObject
 
     public int GetCost()
     {
-        return cost;
+        return ManaCost;
     }
 
     public Sprite GetIcon()
     {
         return displayIcon;
     }
+
+    public int GetDamage()
+    {
+        return damage;
+    }
+
 }
