@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//using BehaviorTree;
-public class TaskAttack : Node
+using BehaviorTree;
+public class TaskAttack : KevNode
 {
     [SerializeField]
     public int unitDmg;

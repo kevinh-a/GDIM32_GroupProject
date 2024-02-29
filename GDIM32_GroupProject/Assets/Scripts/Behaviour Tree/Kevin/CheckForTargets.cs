@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//using BehaviorTree;
-public class CheckForTargets : Node
+using BehaviorTree;
+public class CheckForTargets : KevNode
 {
     //Tutorial :https://www.youtube.com/watch?v=aR6wt5BlE-E
     private static int _enemyLayerMask = 1 << 6;
