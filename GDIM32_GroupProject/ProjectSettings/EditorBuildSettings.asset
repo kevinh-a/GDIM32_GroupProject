@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b2d075cd68c4e432994bd6d1a906e066
   - enabled: 1
-    path: Assets/Scenes/Family-Characters.unity
+    path: Assets/Scenes/FinalMain.unity
     guid: 597ae20ca34de4ae39b3a37903966617
+  - enabled: 1
+    path: Assets/Scenes/TutorialControls.unity
+    guid: 7a552c4bc3804485d8a56e4f98af264a
   - enabled: 1
     path: Assets/Scenes/WinningScreen.unity
     guid: 7ad59f2caaa0c4349950dcf723219182

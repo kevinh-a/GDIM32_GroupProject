@@ -10,8 +10,8 @@ public class DamageSpell : BaseSpell
     [SerializeField] protected Rigidbody2D rb;
     private float RotationSpeed = 10f;
     private float MoveSpeed = 3f;
-    
     private float uptime = 0;
+
 
     public override void DoSpell()
     {
