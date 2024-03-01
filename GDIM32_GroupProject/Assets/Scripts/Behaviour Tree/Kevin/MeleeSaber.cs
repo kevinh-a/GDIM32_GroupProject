@@ -7,9 +7,11 @@ using BehaviorTree;
 public class MeleeSaber : BehaviorTree.Tree
 {
     public UnityEngine.Transform waypoint;
-
+    public static float speed = 2f;
     protected override KevNode SetupTree()
     {
+        KevNode root = new Walk(transform, waypoint);
+        /*
         KevNode root = new Selector(new List<KevNode>
         {
             new Sequence(new List<KevNode>
@@ -23,7 +25,7 @@ public class MeleeSaber : BehaviorTree.Tree
                 new GoToTarget(transform),
             }),
             new Walk(transform, waypoint),
-        });
+        });*/
 
         return root;
     }

@@ -28,7 +28,7 @@ public abstract class CharacterBase : MonoBehaviour
     {
         //First one is way too fast
         //transform.position = new Vector3(transform.position.x + Speed, transform.position.y);
-        rb.velocity = new Vector2(Speed, 0f);
+        //rb.velocity = new Vector2(Speed, 0f);
     }
 
     private int DealDmg()

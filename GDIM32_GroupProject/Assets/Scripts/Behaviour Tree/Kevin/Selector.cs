@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BehaviorTree
 {
@@ -11,7 +9,6 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            bool anyChildIsRunning = false;
 
             foreach (KevNode node in children)
             {
