@@ -28,7 +28,7 @@ public abstract class CharacterBase : MonoBehaviour
     {
         //First one is way too fast
         //transform.position = new Vector3(transform.position.x + Speed, transform.position.y);
-        //rb.velocity = new Vector2(Speed, 0f);
+        rb.velocity = new Vector2(Speed, 0f);
     }
 
     private int DealDmg()
@@ -50,6 +50,12 @@ public abstract class CharacterBase : MonoBehaviour
         {
             enemyProperties.DamageEnemy(DealDmg());
             TakeDmg((int)enemyProperties.setDamage);
+        }
+
+        if(collision.gameObject.TryGetComponent<EnemyMinion>(out EnemyMinion MinionProperties))
+        {
+            MinionProperties.DamageEnemy(DealDmg());
+            TakeDmg((int)MinionProperties.setDamage);
         }
     }
 
