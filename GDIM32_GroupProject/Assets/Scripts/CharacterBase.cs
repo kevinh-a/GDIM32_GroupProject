@@ -15,7 +15,7 @@ public abstract class CharacterBase : MonoBehaviour
     [SerializeField]
     protected CharacterCardSO CharacterDetails;
     [SerializeField]
-    protected Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField]
     public float AttackRange;
     void Start()
@@ -51,6 +51,11 @@ public abstract class CharacterBase : MonoBehaviour
             enemyProperties.DamageEnemy(DealDmg());
             TakeDmg((int)enemyProperties.setDamage);
         }
+    }
+
+    public float GetSpeed()
+    {
+        return Speed;
     }
 
     //public abstract void Movement()

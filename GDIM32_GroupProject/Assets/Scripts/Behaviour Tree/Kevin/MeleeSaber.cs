@@ -4,14 +4,27 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class MeleeSaber : KevNode
+public class MeleeSaber : BehaviorTree.Tree
 {
-    public MeleeSaber()
-    {
+    public UnityEngine.Transform waypoint;
 
-    }
-    public override NodeState Evaluate()
+    protected override KevNode SetupTree()
     {
-        return base.Evaluate();
+        KevNode root = new Selector(new List<KevNode>
+        {
+            new Sequence(new List<KevNode>
+            {
+                new CheckForTargets(transform),
+                new TaskAttack(transform),
+            }),
+            new Sequence(new List<KevNode>
+            {
+                new CheckForTargets(transform),
+                new GoToTarget(transform),
+            }),
+            new Walk(transform, waypoint),
+        });
+
+        return root;
     }
 }

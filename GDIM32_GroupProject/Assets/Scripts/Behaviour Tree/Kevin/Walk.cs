@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walk : MonoBehaviour
+using BehaviorTree;
+
+public class Walk : KevNode
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform _transform;
+    private Transform _waypoint;
+    private float speed;
+
+    public Walk(Transform transform, Transform waypoint)
     {
-        
+        _transform = transform;
+        _waypoint = waypoint;
+        speed = unit.GetSpeed();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override NodeState Evaluate()
     {
-        
+        _transform.position = Vector2.MoveTowards(_transform.position, _waypoint.position, speed * Time.deltaTime);
+        state = NodeState.RUNNING;
+        return state;
     }
 }

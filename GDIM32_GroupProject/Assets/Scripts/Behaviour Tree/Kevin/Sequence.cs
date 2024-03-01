@@ -1,11 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BehaviorTree
 {
     public class Sequence : KevNode
     {
+        public Sequence() : base() { }
+        public Sequence(List<KevNode> children) : base(children) { }
+
         public override NodeState Evaluate()
         {
             bool anyChildIsRunning = false;
