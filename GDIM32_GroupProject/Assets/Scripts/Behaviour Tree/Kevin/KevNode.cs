@@ -12,6 +12,8 @@ namespace BehaviorTree
     }
     public class KevNode
     {
+        public GameObject unit;
+
         protected NodeState state;
 
         public KevNode parent;

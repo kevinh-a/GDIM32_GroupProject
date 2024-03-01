@@ -6,6 +6,7 @@ using BehaviorTree;
 public class CheckForTargets : KevNode
 {
     //Tutorial :https://www.youtube.com/watch?v=aR6wt5BlE-E
+    //AttackRange
     private static int _enemyLayerMask = 1 << 6;
 
     private Transform _transform;
@@ -16,7 +17,8 @@ public class CheckForTargets : KevNode
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
     }
-    /*
+
+
     public override NodeState Evaluate()
     {
         object t = GetData("target");
@@ -27,16 +29,16 @@ public class CheckForTargets : KevNode
         }
 
         Transform target = (Transform)t;
-        if(Vector2.Distance(_transform.position, target.position) <= )
+        if(Vector2.Distance(_transform.position, target.position) <= CharacterBase.AttackRange)
         {
             _animator.SetBool("Attack", true);
-            _animator.SetBool("Walking", false)
+            _animator.SetBool("Walking", false);
 
-            if = NodeState.SUCCESS;
+            state = NodeState.SUCCESS;
             return state;
         }
 
         state = NodeState.FAILURE;
         return state;
-    }*/
+    }
 }

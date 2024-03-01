@@ -16,7 +16,8 @@ public abstract class CharacterBase : MonoBehaviour
     protected CharacterCardSO CharacterDetails;
     [SerializeField]
     protected Rigidbody2D rb;
-
+    [SerializeField]
+    public float AttackRange;
     void Start()
     {
         BaseHp = MaxHp;

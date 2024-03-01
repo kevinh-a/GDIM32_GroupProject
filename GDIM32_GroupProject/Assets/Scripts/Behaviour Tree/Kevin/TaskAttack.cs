@@ -19,7 +19,7 @@ public class TaskAttack : KevNode
     {
 
     }
-    /*
+    
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
@@ -47,5 +47,5 @@ public class TaskAttack : KevNode
         }
         state = NodeState.RUNNING;
         return state;
-    }*/ 
+    }
 }
