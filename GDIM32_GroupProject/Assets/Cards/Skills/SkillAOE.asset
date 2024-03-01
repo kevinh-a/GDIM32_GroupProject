@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SkillAOE
   m_EditorClassIdentifier: 
   displayName: AOE
-  displayIcon: {fileID: 0}
-  cost: 5
+  displayIcon: {fileID: 21300000, guid: b4020f32dcc3144b0a777cca8ebc534e, type: 3}
+  ManaCost: 1
   damage: 30
