@@ -8,11 +8,11 @@ public abstract class BaseSpell : MonoBehaviour
     [SerializeField] protected string Name;
     [SerializeField] protected float ManaCost;
     [SerializeField] protected float DamageCount;
-    private AudioSource audioplayer;
+    private AudioSource soundeffect;
 
     void Start()
     {
-        audioplayer = GetComponent<AudioSource>();
+        soundeffect = GetComponent<AudioSource>();
     }
     public virtual void DoSpell()
     {
@@ -31,7 +31,7 @@ public abstract class BaseSpell : MonoBehaviour
         {
             //Debug.Log("hurt...?");
             enemyProperties.DamageEnemy(DealDmg());
-            audioplayer.Play();
+            soundeffect.Play();
             Destroy(gameObject);
 
         }
