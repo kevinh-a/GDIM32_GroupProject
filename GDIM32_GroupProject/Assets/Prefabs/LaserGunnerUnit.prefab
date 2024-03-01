@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6721599717657939901}
   - component: {fileID: 2870963344867782519}
   - component: {fileID: 2089026638221893997}
+  - component: {fileID: -8750102621412641491}
   m_Layer: 0
   m_Name: LaserGunnerUnit
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6787559143785516333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4ac547be42ab457590724e8d392a6d3, type: 3}
   m_Name: 
@@ -150,6 +151,7 @@ MonoBehaviour:
   dmg: 12
   CharacterDetails: {fileID: 11400000, guid: 9376a992a53ed4650a16160a9ece96c8, type: 2}
   rb: {fileID: 2089026638221893997}
+  AttackRange: 0
 --- !u!50 &2089026638221893997
 Rigidbody2D:
   serializedVersion: 4
@@ -177,3 +179,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8750102621412641491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787559143785516333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabbae19ea921495890720d4ea7da6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoint: {fileID: 5676520047636060305, guid: 3a0b529a7f2eb4df383d8320ec4f720c, type: 3}
