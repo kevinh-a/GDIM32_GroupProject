@@ -33,7 +33,13 @@ public abstract class BaseSpell : MonoBehaviour
             enemyProperties.DamageEnemy(DealDmg());
             soundeffect.Play();
             Destroy(gameObject);
+        }
 
+        if(collision.gameObject.TryGetComponent<EnemyMinion>(out EnemyMinion MinionProperties))
+        {
+            MinionProperties.DamageEnemy(DealDmg());
+            soundeffect.Play();
+            Destroy(gameObject);
         }
     }
 
