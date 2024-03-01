@@ -2,19 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CardType
-    {
-        SPEEDUP,
-        HEAL,
-        AOE,
-        STUN,
-        DAMAGEUP
-    }
-
-public class BaseSpell : MonoBehaviour
+//Jasmine Chen
+public abstract class BaseSpell : MonoBehaviour
 {
     [SerializeField] protected string Name;
     [SerializeField] protected float ManaCost;
     [SerializeField] protected float DamageCount;
 
+    private float uptime = 0;
+
+    public virtual void DoSpell()
+    {
+     
+    }
+
+    private float DealDmg()
+    {
+        return DamageCount;
+    }
+
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.TryGetComponent<Boss>(out Boss enemyProperties))
+        {
+            Debug.Log("hurt...?");
+            enemyProperties.DamageEnemy(DealDmg());
+            Destroy(gameObject);
+
+        }
+    }
+
+
+    void Update()
+    {
+        uptime += Time.deltaTime;
+        Debug.Log(uptime);
+
+        if(uptime >= 2)
+        {
+            Debug.Log("nothing hit...?");
+            Destroy(gameObject);
+            uptime = 0;
+        }
+    }
+
 }
+
