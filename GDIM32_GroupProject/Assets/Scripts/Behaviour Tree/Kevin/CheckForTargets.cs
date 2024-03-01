@@ -21,6 +21,7 @@ public class CheckForTargets : KevNode
 
     public override NodeState Evaluate()
     {
+
         object t = GetData("target");
         if(t == null)
         {
@@ -29,7 +30,7 @@ public class CheckForTargets : KevNode
         }
 
         Transform target = (Transform)t;
-        if(Vector2.Distance(_transform.position, target.position) <= CharacterBase.AttackRange)
+        if(Vector2.Distance(_transform.position, target.position) <= unit.AttackRange)
         {
             _animator.SetBool("Attack", true);
             _animator.SetBool("Walking", false);
