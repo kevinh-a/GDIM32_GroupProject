@@ -861,6 +861,7 @@ MonoBehaviour:
   maxHealth: 75
   setDamage: 5
   Currenthealth: 75
+  healthBar: {fileID: 0}
 --- !u!1 &897497488
 GameObject:
   m_ObjectHideFlags: 0
