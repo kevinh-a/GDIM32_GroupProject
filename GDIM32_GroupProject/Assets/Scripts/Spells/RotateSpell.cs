@@ -1,41 +1,35 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jasmine Chen
-public class DamageSpell : BaseSpell
+public class RotateSpell : BaseSpell
 {
     private GameObject NewSpell;
+    [SerializeField] private Transform rotateAround;
     [SerializeField] protected Rigidbody2D rb;
-    private float RotationSpeed = 10f;
-    private float MoveSpeed = 3f;
-    
+    private float RotationSpeed = 45f;
     private float uptime = 0;
 
     public override void DoSpell()
     {
-        
         //Debug.Log("Spawning...?");
         Instantiate(NewSpell);
 
     }
 
-        void Update()
+    void Update()
     {
-        this.transform.Rotate ( Vector3.forward, RotationSpeed * Time.deltaTime );
-        rb.velocity = transform.right * MoveSpeed;
+        this.transform.RotateAround(rotateAround.position, Vector3.forward, RotationSpeed * Time.deltaTime );
 
         uptime += Time.deltaTime;
         //Debug.Log(uptime);
 
-        if(uptime >= 2)
+        if(uptime >= 5)
         {
             Debug.Log("nothing hit...?");
             Destroy(gameObject);
             uptime = 0;
         }
     }
-
 }
 

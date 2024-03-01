@@ -1476,9 +1476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Units:
-  - {fileID: 3424972031983202258, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
-  - {fileID: 5422528422529347794, guid: 641e31e840b3c4c0d9c5864cf4bb9f5b, type: 3}
   - {fileID: 9182106736242620180, guid: a6388dbc2c3bf4da8a021be3fdfc804f, type: 3}
+  - {fileID: 4489849988554071878, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+  - {fileID: 3424972031983202258, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
   SpawnPoints:
   - {fileID: 1501708458}
   Mana: {fileID: 1351318549}
@@ -2104,6 +2104,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
+--- !u!1001 &5931969241396668106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4489849988554071878, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_Name
+      value: SmallDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.026463568
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
 --- !u!1001 &6185922608025035920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2112,13 +2169,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1698149546670311670, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
+      propertyPath: Name
+      value: Big Damage
+      objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2553586
+      value: 5.87
       objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25848904
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2154,7 +2215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424972031983202258, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_Name
-      value: AOE
+      value: Big Damage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2174,3 +2235,4 @@ SceneRoots:
   - {fileID: 977164257}
   - {fileID: 999884059}
   - {fileID: 6185922608025035920}
+  - {fileID: 5931969241396668106}

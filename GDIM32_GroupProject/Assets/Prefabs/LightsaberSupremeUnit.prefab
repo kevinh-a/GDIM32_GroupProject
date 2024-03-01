@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  MaxHp: 0
   BaseHp: 55
   dmg: 30
   CharacterDetails: {fileID: 11400000, guid: b2389baa0f5014e6687d97f51ff588d3, type: 2}

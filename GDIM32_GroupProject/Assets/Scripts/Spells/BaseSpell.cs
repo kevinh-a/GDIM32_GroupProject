@@ -9,7 +9,6 @@ public abstract class BaseSpell : MonoBehaviour
     [SerializeField] protected float ManaCost;
     [SerializeField] protected float DamageCount;
 
-    private float uptime = 0;
 
     public virtual void DoSpell()
     {
@@ -26,7 +25,7 @@ public abstract class BaseSpell : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<Boss>(out Boss enemyProperties))
         {
-            Debug.Log("hurt...?");
+            //Debug.Log("hurt...?");
             enemyProperties.DamageEnemy(DealDmg());
             Destroy(gameObject);
 
@@ -34,18 +33,7 @@ public abstract class BaseSpell : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        uptime += Time.deltaTime;
-        Debug.Log(uptime);
 
-        if(uptime >= 2)
-        {
-            Debug.Log("nothing hit...?");
-            Destroy(gameObject);
-            uptime = 0;
-        }
-    }
 
 }
 
