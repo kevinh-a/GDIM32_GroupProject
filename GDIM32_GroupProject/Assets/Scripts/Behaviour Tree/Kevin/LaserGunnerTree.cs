@@ -7,10 +7,10 @@ using BehaviorTree;
 public class LaserGunnerTree : BehaviorTree.Tree
 {
     public UnityEngine.Transform waypoint;
-    public static float speed = 2f;
-    public static float attackRange = 7f;
+    public static float speed = 1.8f;
+    private static float attackRange = 4.3f;
     public static float FOVRange = 10f;
-    public static int UnitDmg = 3;
+    private static int UnitDmg = 3;
 
     public LaserGunnerTree(float attackrange, float speed)
     {
@@ -26,15 +26,15 @@ public class LaserGunnerTree : BehaviorTree.Tree
         {
             new Sequence(new List<KevNode>
             {
-                new CheckInAttackRng(transform),
-                new TaskAttack(transform, 5),
+                new CheckInAttackRng(transform, attackRange),
+                new TaskAttack(transform, UnitDmg),
             }),
             new Sequence(new List<KevNode>
             {
                 new CheckFOVRange(transform),
-                new GoToTarget(transform),
+                new GoToTarget(transform, speed),
             }),
-            new Walk(transform, waypoint),
+            new Walk(transform, waypoint, speed),
         });
 
         return root;

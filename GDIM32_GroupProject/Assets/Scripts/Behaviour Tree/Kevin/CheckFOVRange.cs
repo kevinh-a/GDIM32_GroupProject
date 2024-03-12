@@ -28,13 +28,13 @@ public class CheckFOVRange : KevNode
 
             if (colliders.Length > 0)
             {
-                Debug.Log("Checking for target; FOUND");
+                //Debug.Log("Checking for target; FOUND");
                 parent.parent.SetData("target", colliders[0].transform);
                // _animator.SetBool("Walking", true);
                 state = NodeState.SUCCESS;
                 return state;
             }
-            Debug.Log("Checking for target; FAILED");
+            //Debug.Log("Checking for target; FAILED");
             state = NodeState.FAILURE;
             return state;
         }

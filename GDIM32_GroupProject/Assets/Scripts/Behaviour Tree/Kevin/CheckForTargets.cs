@@ -6,11 +6,10 @@ using BehaviorTree;
 public class CheckForTargets : KevNode
 {
     //Tutorial :https://www.youtube.com/watch?v=aR6wt5BlE-E
-    //AttackRange
-    private static int _enemyLayerMask = 1 << 6;
 
     private Transform _transform;
     //private Animator _animator;
+    //private float AttkRange;
 
     public CheckForTargets(Transform transform)
     {

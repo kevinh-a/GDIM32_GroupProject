@@ -4,20 +4,19 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class MeleeSaber : BehaviorTree.Tree
+public class ElumCasterTree : BehaviorTree.Tree
 {
-    
     public UnityEngine.Transform waypoint;
-    private static float speed = 3f;
-    private static float attackRange = 2f;
-    public static float FOVRange = 12f;
-    private static int UnitDmg = 5;
+    private static float speed = 1f;
+    private static float attackRange = 4f;
+    public static float FOVRange = 10f;
+    private static int UnitDmg = 25;
 
-    public MeleeSaber(float attackrange, float speed)
+    public ElumCasterTree(float attackrange, float speed)
     {
         //this.speed = speed;
         //this.attackRange = attackrange;
-        
+
     }
 
     protected override KevNode SetupTree()
@@ -28,6 +27,7 @@ public class MeleeSaber : BehaviorTree.Tree
             new Sequence(new List<KevNode>
             {
                 new CheckInAttackRng(transform, attackRange),
+                new Cast(transform, UnitDmg),
                 new TaskAttack(transform, UnitDmg),
             }),
             new Sequence(new List<KevNode>

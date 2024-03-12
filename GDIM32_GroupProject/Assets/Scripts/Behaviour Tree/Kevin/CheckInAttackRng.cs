@@ -9,10 +9,12 @@ public class CheckInAttackRng : KevNode
 
     private Transform _transform;
     //private Animator _animator;
+    private float _attackRange;
 
-    public CheckInAttackRng(Transform transform)
+    public CheckInAttackRng(Transform transform, float attackRange)
     {
         _transform = transform;
+        _attackRange = attackRange;
         //_animator = transform.GetComponent<Animator>();
     }
 
@@ -26,15 +28,22 @@ public class CheckInAttackRng : KevNode
         }
 
         Transform target = (Transform)t;
-        if (Vector2.Distance(_transform.position, target.position) <= MeleeSaber.attackRange)
+        try
         {
-           // _animator.SetBool("Attacking", true);
-           // _animator.SetBool("Walking", false);
-
-            state = NodeState.SUCCESS;
+            if (Vector2.Distance(_transform.position, target.position) <= _attackRange)
+            {
+                // _animator.SetBool("Attacking", true);
+                // _animator.SetBool("Walking", false);
+                Debug.Log("CheckInAttackRng's " + target);
+                state = NodeState.SUCCESS;
+                return state;
+            }
+        }
+        catch
+        {
+            state = NodeState.FAILURE;
             return state;
         }
-
         state = NodeState.FAILURE;
         return state;
     }

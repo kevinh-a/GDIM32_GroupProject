@@ -13,7 +13,7 @@ namespace BehaviorTree
     public class KevNode
     {
         [SerializeField]
-        public CharacterBase unit;
+        protected CharacterBase unit;
 
         protected NodeState state;
 
