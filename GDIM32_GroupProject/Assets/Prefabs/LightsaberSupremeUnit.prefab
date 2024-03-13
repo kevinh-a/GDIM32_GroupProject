@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2080746809494828787}
   - component: {fileID: 1614319564510515880}
   - component: {fileID: 6522206036644311704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LightsaberSupremeUnit
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   dmg: 30
   CharacterDetails: {fileID: 11400000, guid: b2389baa0f5014e6687d97f51ff588d3, type: 2}
   rb: {fileID: 6522206036644311704}
+  AttackRange: 0
 --- !u!50 &6522206036644311704
 Rigidbody2D:
   serializedVersion: 4

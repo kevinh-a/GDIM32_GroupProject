@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using BehaviorTree;
-public class Cast : KevNode
+public class EnemyTaskAttck : KevNode
 {
     private int dmg;
 
@@ -11,11 +11,10 @@ public class Cast : KevNode
     private Transform _lastTarget;
     private CharacterBase charBase;
 
-    private float cast_time = 4f;
     private float _attackTime = 1f;
     private float _attackCounter = 0f;
 
-    public Cast(Transform transform, int unitDmg)
+    public EnemyTaskAttck(Transform transform, int unitDmg)
     {
         //_animator = transform.GetComponent<Animator>;
         dmg = unitDmg;
@@ -33,14 +32,13 @@ public class Cast : KevNode
         }
 
         _attackCounter += Time.deltaTime;
-
         if (_attackCounter >= _attackTime)
         {
             charBase.TakeDmg(dmg);
             if (charBase == null)
             {
                 ClearData("target");
-                // _animator.SetBool("Casting", false);
+                // _animator.SetBool("Attacking", false);
                 // _animator.SetBool("Walking", true);
             }
             else

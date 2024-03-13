@@ -31,7 +31,7 @@ public class LaserGunnerTree : BehaviorTree.Tree
             }),
             new Sequence(new List<KevNode>
             {
-                new CheckFOVRange(transform),
+                new CheckFOVRange(transform, FOVRange),
                 new GoToTarget(transform, speed),
             }),
             new Walk(transform, waypoint, speed),

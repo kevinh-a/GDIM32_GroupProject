@@ -15,7 +15,7 @@ public abstract class CharacterBase : MonoBehaviour
     [SerializeField]
     protected CharacterCardSO CharacterDetails;
     [SerializeField]
-    public Rigidbody2D rb;
+    public Rigidbody rb;
     [SerializeField]
     public float AttackRange;
     void Start()
@@ -23,20 +23,12 @@ public abstract class CharacterBase : MonoBehaviour
         BaseHp = MaxHp;
     }
 
-    //This will be in the base class until there is a more advanced AI on every unit (second playtest material)
-    void Update()
-    {
-        //First one is way too fast
-        //transform.position = new Vector3(transform.position.x + Speed, transform.position.y);
-        rb.velocity = new Vector2(Speed, 0f);
-    }
-
     private int DealDmg()
     {
         return dmg;
     }
 
-    private void TakeDmg(int dmg)
+    public void TakeDmg(int dmg)
     {
         BaseHp -= dmg;
         if(BaseHp <= 0)
@@ -44,7 +36,8 @@ public abstract class CharacterBase : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*
+    private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.TryGetComponent<Boss>(out Boss enemyProperties))
         {
@@ -57,7 +50,7 @@ public abstract class CharacterBase : MonoBehaviour
             MinionProperties.DamageEnemy(DealDmg());
             TakeDmg((int)MinionProperties.setDamage);
         }
-    }
+    }*/
 
     public float GetSpeed()
     {

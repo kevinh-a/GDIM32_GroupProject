@@ -4,15 +4,16 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class ElumCasterTree : BehaviorTree.Tree
+public class EnemyCommon : BehaviorTree.Tree
 {
-    public UnityEngine.Transform waypoint;
-    private static float speed = 1f;
-    private static float attackRange = 4f;
-    public static float FOVRange = 10f;
-    private static int UnitDmg = 25;
 
-    public ElumCasterTree(float attackrange, float speed)
+    public UnityEngine.Transform waypoint;
+    private static float speed = 3f;
+    private static float attackRange = 2f;
+    public static float FOVRange = 12f;
+    private static int UnitDmg = 5;
+
+    public EnemyCommon(float attackrange, float speed)
     {
         //this.speed = speed;
         //this.attackRange = attackrange;
@@ -26,13 +27,13 @@ public class ElumCasterTree : BehaviorTree.Tree
         {
             new Sequence(new List<KevNode>
             {
-                new CheckInAttackRng(transform, attackRange),
-                new Cast(transform, UnitDmg),
+                new EnemyAttackRange(transform, attackRange),
+                new EnemyTaskAttck(transform, UnitDmg),
             }),
             new Sequence(new List<KevNode>
             {
-                new CheckFOVRange(transform, FOVRange),
-                new GoToTarget(transform, speed),
+                new EnemyCheckFOV(transform, FOVRange),
+                new EnemyGoToTarget(transform, speed),
             }),
             new Walk(transform, waypoint, speed),
         });
