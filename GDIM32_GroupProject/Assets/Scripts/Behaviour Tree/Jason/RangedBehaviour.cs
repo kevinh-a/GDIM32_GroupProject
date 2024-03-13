@@ -7,10 +7,13 @@ public class NewBehaviourScript : MonoBehaviour
 {
     BehaviourTree tree;
     public GameObject boss;
+    public GameObject waypoint;
     NavMeshAgent agent;
 
     public enum ActionState { IDLE, WORKING };
     ActionState state = ActionState.IDLE;
+
+    Node.Status treeStatus = Node.Status.RUNNING;
 
     // Start is called before the first frame update
     void Start()
@@ -18,19 +21,26 @@ public class NewBehaviourScript : MonoBehaviour
         agent = this.GetComponent<NavMeshAgent>();
 
         tree = new BehaviourTree();
-        Node walk = new Node("Walking");
+        Sequence walk = new Sequence("Walking");
+        Leaf waypoint = new Leaf("Waypoint", Waypoint);
         Leaf target = new Leaf("Target Enemy", Target);
         Leaf attack = new Leaf("Attack Enemy", Attack);
 
+        walk.AddChild(waypoint);
         walk.AddChild(target);
         walk.AddChild(attack);
         tree.AddChild(walk);
 
         tree.PrintTree();
 
-        tree.Process();
+      
 
 
+    }
+
+    public Node.Status Waypoint()
+    {
+        return GoToLocation(waypoint.transform.position);
     }
 
     public Node.Status Target()
@@ -42,6 +52,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         return GoToLocation(boss.transform.position);
     }
+
 
     Node.Status GoToLocation(Vector2 destination)
     {
@@ -67,6 +78,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(treeStatus == Node.Status.RUNNING)
+        treeStatus = tree.Process();
     }
 }
