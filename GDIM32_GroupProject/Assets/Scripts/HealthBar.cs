@@ -30,4 +30,10 @@ public class HealthBar : MonoBehaviour
     }
 
 
+      private void Update()
+    {
+        slider.value = CurrentHealth;
+    }
+
+
 }

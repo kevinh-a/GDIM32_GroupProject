@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] public float setDamage;
     [SerializeField] protected float Currenthealth;
+    [SerializeField] public HealthBar Health;
     protected float dmg;
 
 
@@ -40,6 +41,7 @@ public class Boss : MonoBehaviour
         else
         {
             Currenthealth -= dmg;
+            Health.DepleteHealth(dmg);
             return false;
         }
     }

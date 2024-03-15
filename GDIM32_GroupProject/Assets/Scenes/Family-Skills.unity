@@ -1228,6 +1228,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 10398620272256100, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
   m_PrefabInstance: {fileID: 919736573927463332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1776213366 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+  m_PrefabInstance: {fileID: 919736573927463332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f4e7739c1d240faa29ec0fc007f80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1830354859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1636,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1063538118947334844, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Value
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063538118947334844, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_MaxValue
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3232833828280832825, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
       propertyPath: m_Name
       value: Health Bar
@@ -1636,6 +1655,46 @@ PrefabInstance:
     - target: {fileID: 5163697517230880129, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782233050096816869, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782233050096816869, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782233050096816869, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782233050096816869, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401253464890919290, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ec835a4329d4444638e985056250f1c7, type: 3}
+    - target: {fileID: 7401253464890919290, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.059999943
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401253464890919290, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401253464890919290, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: CurrentHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
+      propertyPath: MaxHealthCount
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1712,8 +1771,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 1776213366}
+    - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: setDamage
@@ -1721,7 +1784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1295101074326837203, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: Currenthealth
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3085070351925442630, guid: 3b4708e1c0c2a450f84a3024631e5adb, type: 3}
       propertyPath: m_Name
@@ -1786,11 +1849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.23
+      value: -11.6
       objectReference: {fileID: 0}
     - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.93
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 8695949885604710960, guid: 16c12ea21edf5471582d623297eeedab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1843,11 +1906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.87
+      value: -12.7
       objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 2861018297989027833, guid: 84e86b160cdb14505bbb3d4d5a62007b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1908,11 +1971,11 @@ PrefabInstance:
       objectReference: {fileID: 1501708460}
     - target: {fileID: 6411099731673568927, guid: 39ed710d8196a4ef197436fa4d6ec328, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.17
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 6411099731673568927, guid: 39ed710d8196a4ef197436fa4d6ec328, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.73
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 6411099731673568927, guid: 39ed710d8196a4ef197436fa4d6ec328, type: 3}
       propertyPath: m_LocalPosition.z
