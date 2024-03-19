@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 //Jasmine Chen
 
 public class Timer : MonoBehaviour
@@ -34,7 +37,7 @@ public class Timer : MonoBehaviour
     {
         if (timerText != null)
         {
-            timerText.text = Mathf.CeilToInt(currentTime).ToString(); // Display the remaining time
+            timerText.text = "Time Remaining: " + Mathf.CeilToInt(currentTime).ToString() + "s";
         }
     }
 
@@ -43,6 +46,6 @@ public class Timer : MonoBehaviour
         Debug.Log("Game Over");
         gameOver = true;
 
-        // SceneManager.LoadScene("GameOverScene");
+        SceneManager.LoadScene(4);
     }
 }
