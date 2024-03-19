@@ -14,6 +14,6 @@ public class LocalvsButtons : MonoBehaviour
     // Goes to online multiplayer matchmaking
     public void OnlineMultiplayer()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
