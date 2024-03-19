@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  MaxHp: 0
-  BaseHp: 30
-  dmg: 12
+  MaxHp: 18
+  BaseHp: 18
+  dmg: 6
   CharacterDetails: {fileID: 11400000, guid: 9376a992a53ed4650a16160a9ece96c8, type: 2}
   rb: {fileID: 2089026638221893997}
   AttackRange: 0

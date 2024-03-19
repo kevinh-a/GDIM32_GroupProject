@@ -10,7 +10,7 @@ public class MeleeSaber : BehaviorTree.Tree
     public UnityEngine.Transform waypoint;
     private static float speed = 3f;
     private static float attackRange = 2f;
-    public static float FOVRange = 12f;
+    public static float FOVRange = 6f;
     private static int UnitDmg = 5;
 
     public MeleeSaber(float attackrange, float speed)

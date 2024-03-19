@@ -4,15 +4,16 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class LaserGunnerTree : BehaviorTree.Tree
+public class SurpremeLSBT : BehaviorTree.Tree
 {
-    public UnityEngine.Transform waypoint;
-    private static float speed = 1.8f;
-    private static float attackRange = 4.6f;
-    private static float FOVRange = 6f;
-    private static int UnitDmg = 3;
 
-    public LaserGunnerTree(float attackrange, float speed)
+    public UnityEngine.Transform waypoint;
+    private static float speed = 4f;
+    private static float attackRange = 2.2f;
+    public static float FOVRange = 6f;
+    private static int UnitDmg = 7;
+
+    public SurpremeLSBT(float attackrange, float speed)
     {
         //this.speed = speed;
         //this.attackRange = attackrange;

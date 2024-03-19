@@ -6,12 +6,13 @@ using BehaviorTree;
 
 public class EnemyCommon : BehaviorTree.Tree
 {
-
-    public UnityEngine.Transform waypoint;
+    private GameObject waypointObject;
+    [SerializeField]
+    protected UnityEngine.Transform waypoint;
     private static float speed = 3f;
     private static float attackRange = 2f;
     public static float FOVRange = 12f;
-    private static int UnitDmg = 5;
+    private static int UnitDmg = 3;
 
     public EnemyCommon(float attackrange, float speed)
     {
@@ -19,6 +20,13 @@ public class EnemyCommon : BehaviorTree.Tree
         //this.attackRange = attackrange;
 
     }
+
+    public void setWayPoint(GameObject waypointObj)
+    {
+        waypointObject = waypointObj;
+        waypoint = waypointObject.transform;
+    }
+
 
     protected override KevNode SetupTree()
     {

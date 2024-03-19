@@ -25,13 +25,13 @@ public class EnemyCheckFOV : KevNode
         object t = GetData("target");
         if (t == null)
         {
-            Collider[] colliders = Physics.OverlapSphere(
+            Collider2D colliders = Physics2D.OverlapCircle(
                 _transform.position, FOVRange, _unitLayerMask);
 
-            if (colliders.Length > 0)
+            if (colliders != null)
             {
-                Debug.Log("Enemy checking for target; FOUND");
-                parent.parent.SetData("target", colliders[0].transform);
+                Debug.Log("Enemy checking for target; FOUND: " + colliders);
+                parent.parent.SetData("target", colliders.transform);
                 // _animator.SetBool("Walking", true);
                 state = NodeState.SUCCESS;
                 return state;

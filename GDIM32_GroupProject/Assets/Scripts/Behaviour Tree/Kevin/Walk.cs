@@ -19,7 +19,12 @@ public class Walk : KevNode
 
     public override NodeState Evaluate()
     {
-        _transform.position = Vector2.MoveTowards(_transform.position, _waypoint.position, _speed * Time.deltaTime);
+        if (_waypoint != null)
+        {
+            _transform.position = Vector2.MoveTowards(_transform.position, _waypoint.position, _speed * Time.deltaTime);
+            state = NodeState.RUNNING;
+            return state;
+        }
         state = NodeState.RUNNING;
         return state;
     }
