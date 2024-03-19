@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turret
   m_EditorClassIdentifier: 
   UnitInCard: []
-  CardName: 
-  ManaCost: 0
+  CardName: TURRET
+  ManaCost: 5
   CardIcon: {fileID: 0}
-  amountSpawned: 0
+  amountSpawned: 1
