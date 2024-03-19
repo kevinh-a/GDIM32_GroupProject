@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 // Jasmine Chen
 public class PlayerCardSpawns : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerCardSpawns : MonoBehaviour
 
     private float CooldownTime = 1;
     private float NextUseTime = 0;
+
+
 
  
     private int Player1Location()

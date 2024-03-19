@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 // Jasmine Chen
 
@@ -18,42 +19,49 @@ public class PlayerControls : MonoBehaviour
     private float movementX = 0f;
     private float movementY = 0f;
 
+    PhotonView view;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKey(moveRightKey))
+        if (view.IsMine)
         {
-            movementX = 1f;
+            if (Input.GetKey(moveRightKey))
+            {
+                movementX = 1f;
 
-        }
-        else if (Input.GetKey(moveLeftKey))
-        {
-            movementX = -1f;
+            }
+            else if (Input.GetKey(moveLeftKey))
+            {
+                movementX = -1f;
 
-        }
-        else
-        {
-            movementX = 0f;
-        }
+            }
+            else
+            {
+                movementX = 0f;
+            }
 
-        if (Input.GetKey(moveUpKey))
-        {
-            movementY = 1f;
+            if (Input.GetKey(moveUpKey))
+            {
+                movementY = 1f;
+            }
+            else if (Input.GetKey(moveDownKey))
+            {
+                movementY = -1f;
+            }
+            else
+            {
+                movementY = 0f;
+            }
         }
-        else if (Input.GetKey(moveDownKey))
-        {
-            movementY = -1f;
-        }
-        else
-        {
-            movementY = 0f;
-        }
+       
         
     }
 

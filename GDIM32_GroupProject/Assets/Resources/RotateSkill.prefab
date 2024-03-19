@@ -165,6 +165,7 @@ MonoBehaviour:
   Name: Rotate
   ManaCost: 3
   DamageCount: 5
+  Health: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
   rotateAround: {fileID: 4513073580806066425, guid: 075719473883342828036c8c9e033f07, type: 3}
   rb: {fileID: 3248773730698721672}
 --- !u!82 &3831280401592794317

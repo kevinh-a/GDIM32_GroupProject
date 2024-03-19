@@ -22,7 +22,8 @@ public class Manacount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetValue = (int)Mana.GetMana();
-        ValueText.text = "Mana: " + GetValue.ToString();
+        //Debug.Log("is the mana counting??");
+        //GetValue = (int)Mana.GetMana();
+       // ValueText.text = "Mana: " + GetValue.ToString();
     }
 }

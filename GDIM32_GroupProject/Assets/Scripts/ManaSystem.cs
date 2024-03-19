@@ -14,6 +14,7 @@ public class ManaSystem : MonoBehaviour
     private float CurrentMana;
     public Slider slider;
 
+
     public float GetMana()
     {
         return CurrentMana;
