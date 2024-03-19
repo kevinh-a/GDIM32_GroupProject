@@ -8,6 +8,7 @@ public abstract class BaseSpell : MonoBehaviour
     [SerializeField] protected string Name;
     [SerializeField] protected float ManaCost;
     [SerializeField] protected float DamageCount;
+  //  [SerializeField] public HealthBar Health;
     private AudioSource soundeffect;
 
     void Start()
@@ -31,6 +32,7 @@ public abstract class BaseSpell : MonoBehaviour
         {
             //Debug.Log("hurt...?");
             enemyProperties.DamageEnemy(DealDmg());
+          //  Health.DepleteHealth(DamageCount);
             soundeffect.Play();
             Destroy(gameObject);
         }

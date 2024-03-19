@@ -165,6 +165,7 @@ MonoBehaviour:
   Name: Big Damage
   ManaCost: 6
   DamageCount: 30
+  Health: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
   rb: {fileID: 4836836050902559820}
 --- !u!82 &-1170807869965311510
 AudioSource:

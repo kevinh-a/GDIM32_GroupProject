@@ -11,6 +11,8 @@ public class EnemyMinion : MonoBehaviour
     protected float dmg;
     private float speed = 1.2f;
 
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
