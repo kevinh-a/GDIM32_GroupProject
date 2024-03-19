@@ -646,8 +646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161f810d7bf234f79a490e79314fa407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 217942186667036170, guid: 075719473883342828036c8c9e033f07, type: 3}
-  player2Prefab: {fileID: 7574639248702184525, guid: 7082ff230f1814dfcb2be825552111d0, type: 3}
+  playerPrefab: {fileID: 7574639248702184525, guid: 7082ff230f1814dfcb2be825552111d0, type: 3}
+  player2Prefab: {fileID: 217942186667036170, guid: 075719473883342828036c8c9e033f07, type: 3}
   minX: -9
   maxX: -7
   minY: 5
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae63a840376c54550a1d31bfb28d13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 120
+  totalTime: 60
   timerText: {fileID: 886701602}
 --- !u!114 &886701602
 MonoBehaviour:

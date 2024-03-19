@@ -49,6 +49,6 @@ public class Boss : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 }

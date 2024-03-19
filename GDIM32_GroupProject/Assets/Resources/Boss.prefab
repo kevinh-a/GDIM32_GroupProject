@@ -148,7 +148,7 @@ MonoBehaviour:
   maxHealth: 0
   setDamage: 0
   Currenthealth: 0
-  Health: {fileID: 0}
+  Health: {fileID: 7809982557874208466, guid: 005bf053f0374475585de0a9e2b1970e, type: 3}
 --- !u!114 &4305534542834508724
 MonoBehaviour:
   m_ObjectHideFlags: 0

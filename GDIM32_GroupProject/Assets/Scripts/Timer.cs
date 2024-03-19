@@ -47,6 +47,6 @@ public class Timer : MonoBehaviour
        // Debug.Log("Game Over");
         gameOver = true;
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
 }
