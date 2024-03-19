@@ -151,7 +151,7 @@ MonoBehaviour:
   - {fileID: 9182106736242620180, guid: a6388dbc2c3bf4da8a021be3fdfc804f, type: 3}
   SpawnPoints:
   - {fileID: 7574639248702184525}
-  Mana: {fileID: 3231423715362314398, guid: d678365e055414e17b755451251ce109, type: 3}
+  Mana: {fileID: 831336605233026212, guid: 984334ff6f2bd434496922490ee68124, type: 3}
   one: 46
   two: 47
   three: 303
