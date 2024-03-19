@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
 
-    public float totalTime = 120f; 
+    [SerializeField]
+    private float totalTime; 
     private float currentTime;
     public Text timerText;
     private bool gameOver = false;
@@ -43,7 +44,7 @@ public class Timer : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("Game Over");
+       // Debug.Log("Game Over");
         gameOver = true;
 
         SceneManager.LoadScene(4);
