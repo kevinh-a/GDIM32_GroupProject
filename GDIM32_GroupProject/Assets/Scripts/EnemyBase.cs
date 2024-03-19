@@ -11,6 +11,8 @@ public class EnemyBase : MonoBehaviour
     private int objectHp;
     [SerializeField]
     private int dmg;
+    [SerializeField]
+    private bool isMinion;
     
     public int DealDmg()
     {
@@ -25,10 +27,14 @@ public class EnemyBase : MonoBehaviour
     {
         Debug.Log(health);
         health -= dmg;
-        if(health <= 0)
+        if (health <= 0 && isMinion == false)
         {
             Debug.Log("Destroyed");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
+        }
+        else if (health <= 0 && isMinion == true)
+        {
+            Destroy(gameObject);
         }
     }
 }

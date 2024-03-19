@@ -8,16 +8,18 @@ public class Walk : KevNode
 {
     private Transform _transform;
     private Transform _waypoint;
+    private float _speed;
 
-    public Walk(Transform transform, Transform waypoint)
+    public Walk(Transform transform, Transform waypoint, float speed)
     {
         _transform = transform;
         _waypoint = waypoint;
+        _speed = speed;
     }
 
     public override NodeState Evaluate()
     {
-        _transform.position = Vector2.MoveTowards(_transform.position, _waypoint.position, MeleeSaber.speed * Time.deltaTime);
+        _transform.position = Vector2.MoveTowards(_transform.position, _waypoint.position, _speed * Time.deltaTime);
         state = NodeState.RUNNING;
         return state;
     }

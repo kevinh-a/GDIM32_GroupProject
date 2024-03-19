@@ -6,26 +6,37 @@ using BehaviorTree;
 
 public class MeleeSaber : BehaviorTree.Tree
 {
+    
     public UnityEngine.Transform waypoint;
-    public static float speed = 2f;
+    private static float speed = 3f;
+    private static float attackRange = 2f;
+    public static float FOVRange = 12f;
+    private static int UnitDmg = 5;
+
+    public MeleeSaber(float attackrange, float speed)
+    {
+        //this.speed = speed;
+        //this.attackRange = attackrange;
+        
+    }
+
     protected override KevNode SetupTree()
     {
-        KevNode root = new Walk(transform, waypoint);
-        /*
+
         KevNode root = new Selector(new List<KevNode>
         {
             new Sequence(new List<KevNode>
             {
-                new CheckForTargets(transform),
-                new TaskAttack(transform),
+                new CheckInAttackRng(transform, attackRange),
+                new TaskAttack(transform, UnitDmg),
             }),
             new Sequence(new List<KevNode>
             {
-                new CheckForTargets(transform),
-                new GoToTarget(transform),
+                new CheckFOVRange(transform),
+                new GoToTarget(transform, speed),
             }),
-            new Walk(transform, waypoint),
-        });*/
+            new Walk(transform, waypoint, speed),
+        });
 
         return root;
     }
